@@ -1,0 +1,7 @@
+<svg width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <path d="M100 5 L125 70 L115 70 L100 25 L85 70 L75 70 Z" fill="#C41230" />
+  
+  <text x="10" y="90" font-family="Arial, sans-serif" font-size="36" font-style="italic" font-weight="normal" fill="#333333">amber</text>
+  
+  <text x="135" y="90" font-family="Arial, sans-serif" font-size="36" font-style="italic" font-weight="bold" fill="#C41230">IT</text>
+</svg>

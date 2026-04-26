@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Brand Colors */
+  --color-primary: #0A3D62;
+  --color-secondary: #1E90FF;
+  --color-accent: #00C897;
+
+  /* Neutrals */
+  --color-neutral-dark: #2F3542;
+  --color-neutral-light: #F5F7FA;
+
+  /* Typography */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Base styles are applied via layout.tsx classes, but we can add some defaults here */
+body {
+  background-color: var(--color-neutral-light);
+  color: var(--color-neutral-dark);
+}
