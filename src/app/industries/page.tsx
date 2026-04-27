@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -10,43 +11,43 @@ export const metadata: Metadata = {
 const industriesPrimary = [
   {
     name: "Telecom Mobile Operators",
-    emoji: "📡",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop",
     description:
       "Backbone and access network infrastructure for 2G/3G/4G/5G mobile operators requiring high-density fiber connectivity.",
   },
   {
     name: "Complete Backhaul Solutions",
-    emoji: "🔗",
+    image: "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?q=80&w=800&auto=format&fit=crop",
     description:
       "End-to-end backhaul connectivity linking base stations to core networks with maximum reliability and throughput.",
   },
   {
     name: "NTTN Operators",
-    emoji: "🌐",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop",
     description:
       "Nationwide Telecommunications Transmission Network operators needing scalable, carrier-grade fiber infrastructure.",
   },
   {
     name: "ICX",
-    emoji: "🔀",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
     description:
       "Interconnection Exchange operators requiring high-capacity, low-latency fiber optic interconnect solutions.",
   },
   {
     name: "IIG",
-    emoji: "🌍",
+    image: "https://images.unsplash.com/photo-1520869562399-e772f042f422?q=80&w=800&auto=format&fit=crop",
     description:
       "International Internet Gateway providers demanding ultra-high-capacity undersea and terrestrial fiber connectivity.",
   },
   {
     name: "IGW",
-    emoji: "📞",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
     description:
       "International Gateway operators managing voice and data traffic with resilient fiber optic transport networks.",
   },
   {
     name: "ISP",
-    emoji: "💻",
+    image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=800&auto=format&fit=crop",
     description:
       "Internet Service Providers deploying last-mile FTTH/FTTB and metro fiber optic access networks.",
   },
@@ -55,42 +56,42 @@ const industriesPrimary = [
 const industriesOther = [
   {
     name: "Banks & Financial",
-    emoji: "🏦",
+    image: "https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?q=80&w=800&auto=format&fit=crop",
     description: "Secure, high-availability fiber networks for core banking and financial data centers.",
   },
   {
     name: "TV Channels",
-    emoji: "📺",
+    image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=800&auto=format&fit=crop",
     description: "Broadcast-grade fiber connectivity for live production, playout, and media distribution.",
   },
   {
     name: "Enterprises",
-    emoji: "🏢",
+    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=800&auto=format&fit=crop",
     description: "Campus and WAN fiber solutions for large enterprises requiring scalable internal networks.",
   },
   {
     name: "Hotels",
-    emoji: "🏨",
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop",
     description: "High-speed in-building fiber networks delivering seamless guest and operational connectivity.",
   },
   {
     name: "Military & Defense",
-    emoji: "🛡️",
+    image: "https://images.unsplash.com/photo-1580130544977-6a5ba0b71f2c?q=80&w=800&auto=format&fit=crop",
     description: "Ruggedized, secure fiber optic systems for strategic communications and defense installations.",
   },
   {
     name: "Government Institutions",
-    emoji: "🏛️",
+    image: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=800&auto=format&fit=crop",
     description: "Mission-critical fiber infrastructure connecting government offices, data centers, and public services.",
   },
   {
     name: "Education Centers",
-    emoji: "🎓",
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop",
     description: "High-speed campus fiber networks supporting universities, schools, and research institutions.",
   },
   {
     name: "Large Enterprises",
-    emoji: "🏗️",
+    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=800&auto=format&fit=crop",
     description: "Enterprise-grade fiber backbone solutions for manufacturing plants and large commercial complexes.",
   },
 ];
@@ -131,11 +132,22 @@ export default function IndustriesPage() {
             {industriesPrimary.map((industry, idx) => (
               <div
                 key={idx}
-                className="group bg-white rounded-3xl p-7 shadow-sm border border-zinc-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="group bg-white rounded-3xl shadow-sm border border-zinc-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               >
-                <div className="text-5xl mb-5">{industry.emoji}</div>
-                <h3 className="text-lg font-bold text-zinc-900 mb-2">{industry.name}</h3>
-                <p className="text-zinc-500 text-sm leading-relaxed">{industry.description}</p>
+                <div className="relative h-44 w-full overflow-hidden">
+                  <Image
+                    src={industry.image}
+                    alt={industry.name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-zinc-900 mb-2">{industry.name}</h3>
+                  <p className="text-zinc-500 text-sm leading-relaxed">{industry.description}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -160,11 +172,22 @@ export default function IndustriesPage() {
             {industriesOther.map((industry, idx) => (
               <div
                 key={idx}
-                className="group bg-white rounded-3xl p-7 shadow-sm border border-zinc-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="group bg-white rounded-3xl shadow-sm border border-zinc-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               >
-                <div className="text-5xl mb-5">{industry.emoji}</div>
-                <h3 className="text-lg font-bold text-zinc-900 mb-2">{industry.name}</h3>
-                <p className="text-zinc-500 text-sm leading-relaxed">{industry.description}</p>
+                <div className="relative h-44 w-full overflow-hidden">
+                  <Image
+                    src={industry.image}
+                    alt={industry.name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-zinc-900 mb-2">{industry.name}</h3>
+                  <p className="text-zinc-500 text-sm leading-relaxed">{industry.description}</p>
+                </div>
               </div>
             ))}
           </div>

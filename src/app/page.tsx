@@ -314,54 +314,56 @@ export default async function Home() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Industries We Serve</h2>
             <div className="w-24 h-1 bg-[#00C897] mx-auto rounded-full"></div>
-            <p className="mt-6 text-blue-100 max-w-2xl mx-auto text-lg">Providing specialized solutions tailored to the unique challenges of diverse industrial sectors.</p>
+            <p className="mt-6 text-blue-100 max-w-2xl mx-auto text-lg">
+              Trusted by telecom operators, ISPs, government bodies, financial institutions, and more — delivering fiber optic excellence across every sector.
+            </p>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                name: 'Manufacturing',
-                description: 'Precision equipment and automation support for modern production lines.',
-                image: 'https://images.unsplash.com/photo-1567789884554-0b844b597180?q=80&w=1200&auto=format&fit=crop'
+                name: 'Telecom Operators',
+                description: 'Backbone and access network infrastructure for 2G/3G/4G/5G mobile operators.',
+                image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop'
               },
               {
-                name: 'Construction',
-                description: 'Reliable machinery and engineering support for infrastructure projects.',
-                image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop'
+                name: 'ISP',
+                description: 'Last-mile FTTH/FTTB and metro fiber optic access networks for internet service providers.',
+                image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=800&auto=format&fit=crop'
               },
               {
-                name: 'Energy',
-                description: 'Efficient solutions for power generation, distribution, and maintenance.',
-                image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1200&auto=format&fit=crop'
+                name: 'Banks & Financial',
+                description: 'Secure, high-availability fiber networks for core banking and financial data centers.',
+                image: 'https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?q=80&w=800&auto=format&fit=crop'
               },
               {
-                name: 'Agriculture',
-                description: 'Durable systems that improve productivity across agro-processing operations.',
-                image: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format&fit=crop'
+                name: 'Government',
+                description: 'Mission-critical fiber infrastructure connecting government offices and public services.',
+                image: 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=800&auto=format&fit=crop'
               },
               {
-                name: 'Automotive',
-                description: 'Advanced tools and parts handling for automotive workshops and plants.',
-                image: 'https://images.unsplash.com/photo-1486006920555-c77dcf18193c?q=80&w=1200&auto=format&fit=crop'
+                name: 'NTTN Operators',
+                description: 'Scalable, carrier-grade fiber infrastructure for nationwide transmission networks.',
+                image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop'
               },
               {
-                name: 'Textile',
-                description: 'Process-focused machinery support for spinning, weaving, and finishing.',
-                image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop'
+                name: 'Education Centers',
+                description: 'High-speed campus fiber networks for universities, schools, and research institutions.',
+                image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop'
               },
               {
-                name: 'Pharmaceuticals',
-                description: 'Compliance-ready engineering support for clean, controlled production.',
-                image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop'
+                name: 'TV Channels',
+                description: 'Broadcast-grade fiber connectivity for live production, playout, and media distribution.',
+                image: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=800&auto=format&fit=crop'
               },
               {
-                name: 'Logistics',
-                description: 'Material handling and warehouse efficiency solutions for faster throughput.',
-                image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop'
+                name: 'Enterprises',
+                description: 'Campus and WAN fiber solutions for large enterprises requiring scalable internal networks.',
+                image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=800&auto=format&fit=crop'
               },
             ].map((industry, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden hover:bg-white/15 transition-colors group">
-                <div className="relative h-40">
+              <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group">
+                <div className="relative h-40 overflow-hidden">
                   <Image
                     src={industry.image}
                     alt={industry.name}
@@ -369,6 +371,7 @@ export default async function Home() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{industry.name}</h3>
@@ -376,6 +379,12 @@ export default async function Home() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/industries" className="inline-flex items-center bg-[#00C897] hover:bg-[#00b386] text-white font-semibold py-4 px-8 rounded-full transition-colors text-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform duration-200">
+              View All Industries <span className="ml-2">→</span>
+            </Link>
           </div>
         </div>
       </section>
