@@ -76,7 +76,7 @@ const industriesOther = [
   },
   {
     name: "Military & Defense",
-    image: "https://images.unsplash.com/photo-1580130544977-6a5ba0b71f2c?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=800&auto=format&fit=crop",
     description: "Ruggedized, secure fiber optic systems for strategic communications and defense installations.",
   },
   {
@@ -86,7 +86,7 @@ const industriesOther = [
   },
   {
     name: "Education Centers",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop",
     description: "High-speed campus fiber networks supporting universities, schools, and research institutions.",
   },
   {
