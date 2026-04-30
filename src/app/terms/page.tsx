@@ -10,14 +10,14 @@ export default function TermsOfService() {
     <div className="bg-[#f8fafc] min-h-screen py-16 px-6">
       <div className="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm">
         <h1 className="text-4xl font-bold text-[#0A3D62] mb-8">Terms of Service</h1>
-        
+
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p className="text-sm text-gray-500">Effective Date: April 30, 2026</p>
 
           <section>
             <h2 className="text-2xl font-semibold text-[#0A3D62] mb-4">1. Agreement to Terms</h2>
             <p>
-              These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity (&quot;you&quot;) and Fiber Optic Network Solutions (FONS) Bangladesh Ltd. (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), concerning your access to and use of the fonsbangladesh.com website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto.
+              These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity (&quot;you&quot;) and Fiber Optic Network Solutions (FONS) Bangladesh Ltd. Us concerning your access to and use of the fonsbangladesh.com website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto.
             </p>
           </section>
 

@@ -10,14 +10,14 @@ export default function PrivacyPolicy() {
     <div className="bg-[#f8fafc] min-h-screen py-16 px-6">
       <div className="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm">
         <h1 className="text-4xl font-bold text-[#0A3D62] mb-8">Privacy Policy</h1>
-        
+
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p className="text-sm text-gray-500">Effective Date: April 30, 2026</p>
 
           <section>
             <h2 className="text-2xl font-semibold text-[#0A3D62] mb-4">1. Introduction</h2>
             <p>
-              Welcome to Fiber Optic Network Solutions (FONS) Bangladesh Ltd. (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice or our practices with regard to your personal information, please contact us at info@fonsbangladesh.com.
+              Welcome to Fiber Optic Network Solutions (FONS) Bangladesh Ltd. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice or our practices with regard to your personal information, please contact us at info@fonsbangladesh.com.
             </p>
           </section>
 
