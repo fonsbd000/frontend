@@ -4,7 +4,9 @@
 
 import qs from 'qs';
 
-const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://127.0.0.1:1337';
+const STRAPI_URL =
+  process.env.NEXT_PUBLIC_API_URL ||
+  'https://strapi-backend-production-cbbd.up.railway.app';
 
 export function getStrapiURL(path = '') {
   return `${STRAPI_URL}${path}`;
